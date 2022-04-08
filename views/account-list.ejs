@@ -1,0 +1,43 @@
+
+<%- include("layout/header.ejs") -%>
+
+<!-- content
+    ================================================== -->
+<section class="s-content">
+  <div class="row">
+    <div class="column large-12">
+      <section>
+
+        <div class="table-data">
+            <h2>Registered Accounts</h2>
+                <table style="border: 1px;">
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                    </tr>
+                    
+                    <%
+                    if(accountData.length!=0){
+                    var i=1;
+                    accountData.forEach((data) => {
+                    %>
+                    <tr>
+                        <td><%=i; %></td>
+                        <td><%=data.username %></td>
+                        <td><%=data.email %></td>
+                    </tr>
+                    <!-- <%  i++; }) %>
+                    <% } else{ %>
+                        <tr>
+                            <td colspan="7">No Data Found</td>
+                        </tr>
+                    <% } %> -->
+                </table>
+                </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<%- include("layout/footer.ejs") -%>
